@@ -26,51 +26,6 @@
         },
         "muteRole": "444875478390800406"
     },
-     "Mo": {
-        "guildId": "424911215714631690",
-        "prefix": "!",
-        "adminRoles": [
-            "425225020382642176"
-        ],
-        "logChannel": "718176504437276682",
-        "deletedMessages": false,
-        "status": "dnd"
-    },
-    "Mel": {
-        "spreadsheetID": "1b-2t41LO_U5j8gJfxPS_rdg4Y8kINwMgSqUKpNdf4RE",
-        "guildId": "326412222119149578",
-        "prefix": "?",
-        "adminRoles": [
-            "151759779016998913",
-            "702591687096270848",
-            "425225020382642176"
-        ],
-        "logChannel": "718176504437276682",
-        "deletedMessages": false,
-        "status": "online",
-        "activity": {
-            "name": "to your questions ❓",
-            "type": "LISTENING",
-            "url": "https://www.twitch.tv/echoarena_vrml"
-        },
-        "muteRole": "748631446217818123"
-    },
-    "Py": {
-        "guildId": "861208697274630164",
-        "prefix": "#",
-        "adminRoles": [
-            "861288359702560788",
-            "425225020382642176"
-        ],
-        "deletedMessages": false,
-        "status": "online",
-        "activity": {
-            "name": "to your questions ❓",
-            "type": "LISTENING",
-            "url": "https://www.twitch.tv/watchvrsn"
-        },
-        "muteRole": "748631446217818123"
-    },
     "Bane": {
         "spreadsheetID": "1EUd3czTty60S7WhFn9Y5leOtH0lOu2LhLEvkQ62eE50",
         "guildId": "428667403950620679",
@@ -108,28 +63,6 @@
             "url": "https://www.twitch.tv/"
         }
     },
-    "VRL": {
-        "guildId": "439427299675209729",
-        "prefix": "?",
-        "adminRoles": [
-            "447791613926834176"
-        ],
-        "logChannel": "566294428453699584",
-        "guildLogs": true,
-        "deletedMessages": true,
-        "status": "dnd",
-        "activity": {
-            "name": "for a new job 😔",
-            "type": "WATCHING",
-            "url": "https://www.twitch.tv/vrchallenger"
-        },
-        "roles": {
-            "lft": "549925842646597651",
-            "Scrimmer": "509787093208399872",
-            "Climbey": "428612225134231552"
-        },
-        "muteRole": ""
-    },
     "KVN": {
         "guildId": "707307751033798666",
         "prefix": "!",
@@ -146,6 +79,51 @@
             "url": "https://www.twitch.tv/"
         },
         "muteRole": ""
+    },
+    "Mel": {
+        "spreadsheetID": "1b-2t41LO_U5j8gJfxPS_rdg4Y8kINwMgSqUKpNdf4RE",
+        "guildId": "326412222119149578",
+        "prefix": "?",
+        "adminRoles": [
+            "151759779016998913",
+            "702591687096270848",
+            "425225020382642176"
+        ],
+        "logChannel": "718176504437276682",
+        "deletedMessages": false,
+        "status": "online",
+        "activity": {
+            "name": "to your questions ❓",
+            "type": "LISTENING",
+            "url": "https://www.twitch.tv/echoarena_vrml"
+        },
+        "muteRole": "748631446217818123"
+    },
+    "Mo": {
+        "guildId": "424911215714631690",
+        "prefix": "!",
+        "adminRoles": [
+            "425225020382642176"
+        ],
+        "logChannel": "718176504437276682",
+        "deletedMessages": false,
+        "status": "dnd"
+    },
+    "Py": {
+        "guildId": "861208697274630164",
+        "prefix": "#",
+        "adminRoles": [
+            "861288359702560788",
+            "425225020382642176"
+        ],
+        "deletedMessages": false,
+        "status": "online",
+        "activity": {
+            "name": "to your questions ❓",
+            "type": "LISTENING",
+            "url": "https://www.twitch.tv/watchvrsn"
+        },
+        "muteRole": "748631446217818123"
     },
     "TG Bot": {
         "guildId": "421618914166833152",

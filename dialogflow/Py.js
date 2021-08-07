@@ -1,11 +1,14 @@
 module.exports = {
-  name: "Py",
-  execute: async function(client, message, functions, set) {
-    const Discord = require("discord.js");
-    const answer = await functions.DialogflowQuery(client, message);
+    name: "Py",
+    execute: async function (client, Discord, message, functions, set) {
 
-    //=========================================================================================================
- message.reply(answer.response);
-    //=========================================================================================================
-  }
+        if (message.channel.type == "dm" ||
+            message.mentions.has(client.user.id) ||
+            message.cleanContent.startsWith(client.user.username + " ") ||
+            message.cleanContent.startsWith(client.user.username.toLowerCase() + " ")) {
+
+            const answer = await functions.DialogflowQuery(client, message);
+            message.reply(answer.response);
+        }
+    }
 };

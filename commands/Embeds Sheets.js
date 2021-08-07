@@ -12,7 +12,7 @@ module.exports = {
             const rows = await sheet.getRows();
 
             let embed = rows.filter(embed => embed.name == args.join(" "));
-            const finalEmbed = functions.EmbedBuilder(embed);
+            const finalEmbed = functions.EmbedBuilder(Discord, embed);
             message.channel.send(finalEmbed);
         }
     }

@@ -1,4 +1,3 @@
-const Discord = require("discord.js");
 const Embed = require("../embeds.js")
 
 module.exports = {

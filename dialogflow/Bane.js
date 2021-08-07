@@ -1,20 +1,19 @@
 module.exports = {
     name: "Bane",
-    execute: async function (client, message, set) {
-        const Discord = require("discord.js");
-        const functions = require("../functions.js");
-        const answer = await functions.DialogflowQuery(client, message);
-        const AskBaneChannel = "819541831086899230";
+    execute: async function (client, Discord, message, functions, set) {
 
-        const data = await functions.SpreadsheetGET(client);
-        
+        if (message.mentions.has(client.user.id) || message.channel.type == "dm") {
+            const data = await functions.SpreadsheetGET(client);
+            const answer = await functions.DialogflowQuery(client, message);
+            const AskBaneChannel = "819541831086899230";
+
             //=========================================================================================================
             if (
                 answer.intent == "Default Welcome Intent" ||
                 answer.intent.includes("Discord")
             ) {
                 message.reply(answer.response);
-                functions.Inform(client, answer, message);
+                functions.Inform(client, Discord, answer, message);
             }
             //=================================================================
             else if (answer.intent.substring(0, 5) === "embed") {
@@ -37,13 +36,13 @@ module.exports = {
                 }
                 if (answer.intent === "Meme") {
                     try {
-                    const sheet = data.doc.sheetsByTitle["Memes"];
-                    const rows = await sheet.getRows();
-                    const meme = rows[Math.floor(Math.random() * rows.length)].meme;
-                    message.channel.send(meme);
+                        const sheet = data.doc.sheetsByTitle["Memes"];
+                        const rows = await sheet.getRows();
+                        const meme = rows[Math.floor(Math.random() * rows.length)].meme;
+                        message.channel.send(meme);
                     }
-                    catch(e){
-                    console.log(e)
+                    catch (e) {
+                        console.log(e)
                     }
                 }
                 if (answer.intent === "Fun Fact") {
@@ -112,7 +111,7 @@ module.exports = {
                 //=========================================================================================================
                 else {
                     message.reply(answer.response);
-                    functions.Inform(client, answer, message);
+                    functions.Inform(client, Discord, answer, message);
                 }
             } else {
                 if (answer.intent === "Tip") {
@@ -207,7 +206,7 @@ module.exports = {
                     client.channels.cache
                         .get(AskBaneChannel)
                         .send(answer.response);
-                    functions.Inform(client, answer, message);
+                    functions.Inform(client, Discord, answer, message);
                 }
                 client.channels.cache
                     .get(AskBaneChannel)
@@ -215,8 +214,8 @@ module.exports = {
                         `If you have further questions, ${message.author}, let's continue our little chat here!`
                     );
             }
-        
-        //=========================================================================================================
-        
+
+            //=========================================================================================================
+        }
     }
 };

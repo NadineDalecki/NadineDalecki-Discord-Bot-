@@ -1,7 +1,5 @@
-const Discord = require("discord.js")
-
 module.exports = {
-    Wel_WC: function (message) {
+    Wel_WC: function (Discord, message) {
         const embed = new Discord.MessageEmbed()
             .setColor("#4A26D7")
             .setAuthor("Welcome to the NEPA Echo Arena World Cup Discord!")
@@ -29,13 +27,13 @@ module.exports = {
             )
         return embed
     },
-    Virtex1: function (messaege) {
+    Virtex1: function (Discord, messaege) {
         const embed = new Discord.MessageEmbed().setImage(
             "https://cdn.discordapp.com/attachments/725062405570166874/856581748094795796/Virtex_Stadium_Discord_Banner.png"
         );
         return embed
     },
-    Virtex2: function (message) {
+    Virtex2: function (Discord, message) {
         const embed = new Discord.MessageEmbed()
             .setColor("#0d171a")
             .setDescription(
@@ -53,7 +51,7 @@ module.exports = {
             );
         return embed
     },
-    Wel_EU: function (message) {
+    Wel_EU: function (Discord, message) {
         const embed = new Discord.MessageEmbed()
             .setColor("#50d0d9")
             .setAuthor("Echo Arena Discord Europe")
@@ -83,7 +81,7 @@ module.exports = {
             );
         return embed
     },
-    Wel_TG: function (messaege) {
+    Wel_TG: function (Discord, messaege) {
         const embed = new Discord.MessageEmbed()
             .setColor("#51c3e7")
             .setDescription(
@@ -122,13 +120,13 @@ module.exports = {
             )
         return embed
     },
-    WC_Regions_Img: function (messaege) {
+    WC_Regions_Img: function (Discord, messaege) {
         const embed = new Discord.MessageEmbed().setImage(
             "https://cdn.discordapp.com/attachments/861927079741095976/873138673187696720/European_Regions.png"
         );
         return embed
     },
-    WC_Regions: function (messaege) {
+    WC_Regions: function (Discord, messaege) {
         const embed = new Discord.MessageEmbed()
             .setColor("#0d171a")
             .setAuthor("Participation Countries and Regions")

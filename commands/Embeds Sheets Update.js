@@ -13,7 +13,7 @@ module.exports = {
       const rows = await sheet.getRows();
 
       let embed = rows.filter(row => row.name == args[2]);
-      const finalEmbed = functions.EmbedBuilder(embed);
+      const finalEmbed = functions.EmbedBuilder(Discord, embed);
 
       client.channels.cache
         .get(args[0])

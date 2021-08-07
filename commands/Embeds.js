@@ -1,4 +1,3 @@
-const Discord = require("discord.js");
 const Embed = require("../embeds.js")
 
 module.exports = {
@@ -10,7 +9,7 @@ module.exports = {
             message.member.roles.cache.some(r => adminRoles.includes(r.id)) ||
             message.member.hasPermission("ADMINISTRATOR")
         ) {
-            const embed = Embed[`${args}`](message)
+            const embed = Embed[`${args}`](Discord, message)
             message.channel.send(embed)
         }
     }
